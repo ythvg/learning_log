@@ -54,6 +54,11 @@ if os.getcwd() == '/app':
     # 让request.is_secure()承认X-Forwarded-Proto头
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+    # 只允许Heroku托管这个项目
+    ALLOWED_HOSTS = ['learning-log-spike.herokuapp.com']
+    
+    DEBUG = False
+
     # 支持所有的主机头
     ALLOWED_HOSTS = ['*']
     
