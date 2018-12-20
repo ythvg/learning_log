@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 LOGIN_URL = '/users/login/'
 
 # Heroku设置
-if os.getcwd() == 'app':
+if os.getcwd() == '/app':
     import dj_database_url
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost') 
